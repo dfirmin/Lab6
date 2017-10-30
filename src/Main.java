@@ -24,7 +24,7 @@ public class Main {
 
 	// convert the word to pig latin by using StringBuilder as the new pig latin
 	// string
-	// returns the StringBuilder string as a normal string.
+	// returns the StringBuilder string as a string.
 	public static String convertWord(String input) {
 		StringBuilder modifiedInput = new StringBuilder();
 		 
@@ -32,8 +32,6 @@ public class Main {
 				if (startsWithVowel(input)) {
 				modifiedInput.append(input).append("way ");
 				}
-				//FIX ME, THIS IS ONLY MOVING THE FIRST CHARACTER TO THE END OF STRING
-				// SOME TYPE OF LOOP IS NEEDED
 				else {
 					for (int i = 0; i < word.length(); i++) {
 						if ("AEIOUaeiou".indexOf(word.charAt(i)) > -1) {
@@ -41,8 +39,6 @@ public class Main {
 							
 						}
 					}
-				
-					//modifiedInput.append(word.substring(1)).append(word.charAt(0)).append("ay ");
 				}
 			}
 			
